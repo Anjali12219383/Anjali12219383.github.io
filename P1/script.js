@@ -1,5 +1,5 @@
 const loginForm=()=>{
-    const str=`
+    const str=`<div>
     <h3>Login Form</h3>
     <label for="email">Email:</label>
     <input type="email" placeholder="email" id="email" required>
@@ -12,7 +12,7 @@ const loginForm=()=>{
 }
 
 const registerForm=()=>{
-     const str=`
+     const str=`<div>
     <h3>registration Form</h3>
     <input type="text" placeholder="name" id="name" required>
     <input type="email" placeholder="email" id="email" required>
