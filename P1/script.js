@@ -14,6 +14,19 @@ const validateUser = () => {
   }
 };
 
+const renderUserList = () => {
+    let x= "<h4>Registered Users:</h4>";
+    if(users.length==0){
+        return "<p>No Users Registered</p>";
+
+    }
+    users.forEach(user => {
+        x += `<p>${user.name} | ${user.email} | ${user.pass}</p>`;
+    });
+    
+    return x;
+};
+
 const loginForm = () => {
   const str = `<div>
     <h3>Login Form</h3>
@@ -22,6 +35,11 @@ const loginForm = () => {
     <p><input type='password' id='txtPass1'></p>
     <p><button onclick='validateUser()'>Submit</button></p>
     <p><button onclick='registerForm()'>Create Account</button></p>
+    </div>
+
+    <div>
+    ${renderUserList()}
+    </div>
     `;
   root.innerHTML = str + "</div>";
 };
